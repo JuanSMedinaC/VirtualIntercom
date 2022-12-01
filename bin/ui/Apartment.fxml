@@ -7,12 +7,12 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ApartmentController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ApartmentController">
    <center>
       <Pane prefHeight="600.0" prefWidth="800.0" BorderPane.alignment="CENTER">
          <children>
-            <TextArea fx:id="textSpace" layoutX="78.0" layoutY="386.0" prefHeight="74.0" prefWidth="488.0" />
-            <Button layoutX="587.0" layoutY="386.0" mnemonicParsing="false" onAction="#sendmsg" prefHeight="71.0" prefWidth="126.0" text="Send" />
+            <TextArea fx:id="textSpace" layoutX="78.0" layoutY="386.0" onKeyPressed="#sendmsg" prefHeight="74.0" prefWidth="488.0" />
+            <Button layoutX="587.0" layoutY="386.0" mnemonicParsing="false" onAction="#sendmsgByButton" prefHeight="71.0" prefWidth="126.0" text="Send" />
             <TextArea fx:id="chatSpace" editable="false" layoutX="78.0" layoutY="26.0" prefHeight="353.0" prefWidth="635.0" />
             <Button layoutX="650.0" layoutY="483.0" mnemonicParsing="false" onAction="#sos" prefHeight="94.0" prefWidth="127.0" text="Panic Button" />
             <TextArea fx:id="recSpace" editable="false" layoutX="259.0" layoutY="486.0" prefHeight="88.0" prefWidth="378.0" />

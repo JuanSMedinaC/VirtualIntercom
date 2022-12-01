@@ -13,23 +13,24 @@ public class ApartmentData implements Runnable{
 	private int aptNum;
 	private DataInputStream in;
 	private DataOutputStream out;
+	private String ip;
 	
-	public ApartmentData(int port, String msg) {
+	public ApartmentData(int port, String msg, String ip) {
 		this.port =port;
-		this.msg= msg;		
+		this.msg= msg;
+		this.ip=ip;
 	}
 	
 	
 	@Override
 	public void run() {
-		String observerIp="127.0.0.1";
 		
 		DataOutputStream out;
 		
 		
 		
 		try {
-			Socket sc= new Socket(observerIp,port);
+			Socket sc= new Socket(ip,port);
 			
 			out = new DataOutputStream(sc.getOutputStream());
 			
