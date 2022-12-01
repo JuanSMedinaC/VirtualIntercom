@@ -1,8 +1,13 @@
 package application;
 	
+import java.net.*;
+import java.util.ArrayList;
+import java.io.*;
+
 import controller.*;
 import javafx.application.Application;
 import javafx.stage.Stage;
+import model.ApartmentData;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.fxml.FXMLLoader;
@@ -10,6 +15,8 @@ import javafx.fxml.FXMLLoader;
 
 public class Reception extends Application {
 	public static Stage currentStage=new Stage();
+	public static ApartmentData apt1=null;
+	public static ApartmentData apt2=null;
 	@Override
 	public void start(Stage primaryStage) {
 		BorderPane root;
@@ -32,6 +39,7 @@ public class Reception extends Application {
 			e.printStackTrace();
 		}
 	}
+	
 	
 	public static void main(String[] args) {
 		launch(args);
