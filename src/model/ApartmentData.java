@@ -39,9 +39,7 @@ public class ApartmentData implements Runnable{
 			
 			sc.close();
 			
-			
-			
-			
+
 			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

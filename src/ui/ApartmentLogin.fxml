@@ -7,16 +7,16 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ApartmentLoginController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ApartmentLoginController">
    <center>
       <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="259.0" layoutY="140.0" prefHeight="68.0" prefWidth="283.0" text="Apt. Number">
+            <Label layoutX="283.0" layoutY="144.0" prefHeight="68.0" prefWidth="283.0" text="Apt. Number">
                <font>
                   <Font name="System Bold Italic" size="45.0" />
                </font>
             </Label>
-            <Button layoutX="374.0" layoutY="518.0" mnemonicParsing="false" onAction="#login" text="Log in" />
+            <Button layoutX="376.0" layoutY="354.0" mnemonicParsing="false" onAction="#login" text="Log in" />
             <ChoiceBox fx:id="numField" layoutX="326.0" layoutY="245.0" prefWidth="150.0" />
          </children>
       </Pane>

@@ -19,7 +19,11 @@ public class Apartment extends Application{
 	public static int thisPort=0;
 	public static int thisNum=0;
 	
-	
+	/**
+	 * Loads the screen to choose the desired apartment number.
+	 * @param primaryStage
+	 * @return void
+	 */
 	@Override
 	public void start(Stage primaryStage) {
 		BorderPane root;
@@ -31,20 +35,24 @@ public class Apartment extends Application{
 
 			Scene scene = new Scene(root);
 			currentStage.setScene(scene);
-			currentStage.setHeight(600);
 			currentStage.setWidth(800);
+			currentStage.setHeight(600);
+			currentStage.setResizable(false);
 			currentStage.show();
 			
 			apController.start();
 			
-			
-		
+
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
 	}
 	
 	
+	/**
+	 * Loads the resident interface 
+	 * @return void
+	 */
 	public void aptView() {
 		BorderPane root;
 		try {
@@ -57,7 +65,9 @@ public class Apartment extends Application{
 			currentStage.setScene(scene);
 			currentStage.setHeight(600);
 			currentStage.setWidth(800);
+			currentStage.setResizable(false);
 			currentStage.show();
+			
 			apController.start();
 			
 		

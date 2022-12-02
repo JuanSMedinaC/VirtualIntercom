@@ -17,6 +17,12 @@ public class Reception extends Application {
 	public static Stage currentStage=new Stage();
 	public static ApartmentData apt1=null;
 	public static ApartmentData apt2=null;
+	
+	/**
+	 * Loads the reception interface
+	 * @param primaryStage
+	 * @return void
+	 */
 	@Override
 	public void start(Stage primaryStage) {
 		BorderPane root;
