@@ -11,6 +11,7 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import model.ApartmentData;
 import model.Server;
+import model.EmergencyContact;
 
 public class ApartmentController implements Observer{
 	
@@ -108,12 +109,21 @@ public class ApartmentController implements Observer{
 	 * Alerts the reception that the resident pressed the panic button
 	 * @return void
 	 */
-	public void sos() {
-		String msg = "The apartment #" + Apartment.thisNum + " has pressed the panic button, needs help!";
-		ApartmentData apData = new ApartmentData(6002,msg, "127.0.0.1"); //ip de la recepciï¿½n 
+	public void sos() throws Exception{
+		String msg="The apartment #"+ Apartment.thisNum+ " has pressed the panic button, needs help!";
+		ApartmentData apData = new ApartmentData(6002,msg, "127.0.0.1"); //ip de la recepción 
 		Thread t = new Thread(apData);
 		t.start();
+		EmergencyContact email;
+		
+		if (main.thisNum==1) {
+			email = new EmergencyContact("correoDeEmergenciaCompuint@outlook.com", "RECEPCION", "luis.botero2001@gmail.com");
+		} else {
+			email = new EmergencyContact("correoDeEmergenciaCompuint@outlook.com", "RECEPCION", "villegas.carlos043@outlook.com");
+		}
+		email.sendEmail();
 	}
+
 	
 	
 	/**
